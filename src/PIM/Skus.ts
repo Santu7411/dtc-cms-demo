@@ -32,18 +32,18 @@ const Skus: CollectionConfig = {
           width:"30%",
         }
       }, 
-      {
-        name:"products",
-        label: "产品",
-        type:"relationship",
-        relationTo:["products"],
-        admin:{ 
-          width:"40%",  
-          style: {
-            alignSelf: 'flex-end',
-          },        
-        }
-      },  
+     // {
+     //   name:"products",
+    //    label: "产品",
+     //   type:"relationship",
+     //   relationTo:["products"],
+    //    admin:{ 
+    //      width:"40%",  
+    //      style: {
+    //        alignSelf: 'flex-end',
+   //       },        
+   //     }
+   //   },  
      ] 
     }
    ,    
