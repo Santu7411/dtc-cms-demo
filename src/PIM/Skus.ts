@@ -60,7 +60,6 @@ const Skus: CollectionConfig = {
             name: "properties", // required
             type: "array", // required
             label: "属性",
-            interfaceName: "properties", // optional
             labels: {
               singular: "属性",
               plural: "属性",
