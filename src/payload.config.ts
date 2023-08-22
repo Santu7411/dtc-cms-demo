@@ -10,6 +10,7 @@ import Collections from './collections/PIM/Collections';
 import ProductTags from './collections/PIM/ProductTags';
 import Skus from './collections/PIM/Skus';
 import Products from './collections/PIM/Products';
+import Resources from './collections/Resources';
 
 export default buildConfig({
   admin: {
@@ -21,7 +22,7 @@ export default buildConfig({
     }
   },
   collections: [
-    Products, Skus, Categories, Collections, ProductTags, Users, Media
+    Products, Skus, Categories, Collections, ProductTags, Users, Media, Resources
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
