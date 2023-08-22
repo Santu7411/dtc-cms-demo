@@ -11,6 +11,12 @@ import ProductTags from './collections/PIM/ProductTags';
 import Skus from './collections/PIM/Skus';
 import Products from './collections/PIM/Products';
 import Resources from './collections/Resources';
+import TouchPoints from './collections/General/TouchPoints';
+import Targets from './collections/General/Targets';
+import Tiers from './collections/General/Tiers';
+import Channels from './collections/General/Chanels';
+import CalculatedEvents from './collections/General/CalculatedEvents';
+import InteractiveEvents from './collections/General/InteractiveEvents copy';
 
 export default buildConfig({
   admin: {
@@ -22,7 +28,7 @@ export default buildConfig({
     }
   },
   collections: [
-    Products, Skus, Categories, Collections, ProductTags, Users, Media, Resources
+    Products, Skus, Categories, Collections, ProductTags, Users, Media, Resources, TouchPoints, Targets, Tiers, Channels, CalculatedEvents, InteractiveEvents
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),

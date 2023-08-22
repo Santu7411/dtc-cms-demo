@@ -114,7 +114,7 @@ const Products: CollectionConfig = {
         relationTo: 'productTags', // required
         hasMany: true,
         admin:{
-          width:"34%",
+          width:"33%",
         }
       },  
      ] 
