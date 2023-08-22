@@ -13,49 +13,113 @@ const Products: CollectionConfig = {
   },
   fields: [
     {
-      name: 'image', // required
+      name: 'thumbnail', // required
       type: 'upload', // required
       relationTo: 'media', // required
     },
     {
-     type:'row',
-     fields:[
-
-      {
-        name: "titleCN",
-        label: "中文名称", 
-        type: "text",
-        required: true,
-        admin:{ 
-          width:"34%",          
-        }
-      },
-      {
-        name: "titleEN",
-        label: "英文名称", 
-        type: "text",
-        admin:{
-          width:"33%",
-        }
-      },
-      {
-        name: "titleNick",
+      type:'row',
+      fields:[
+ 
+       {
+         name: "titleCN",
+         label: "中文名称", 
+         type: "text",
+         required: true,
+         admin:{ 
+           width:"34%",          
+         }
+       },
+       {
+         name: "titleEN",
+         label: "英文名称", 
+         type: "text",
+         admin:{
+           width:"33%",
+         }
+       }, 
+       {
+        name: "nickname",
         label: "昵称", 
         type: "text",
         admin:{
           width:"33%",
         }
-      },   
+      }, 
+      ] 
+     }
+    , 
+    {
+      type:'row',
+      fields:[
+ 
+       {
+         name: "productId",
+         label: "产品ID", 
+         type: "text",
+         required: true,
+         admin:{ 
+           width:"50%",          
+         }
+       },
+       {
+        name: 'online', // required
+        type: 'checkbox', // required
+        label: '上架',
+        defaultValue: false,
+        admin:{ 
+          width:"25%",          
+        }
+      },
+      {
+        name: 'isNew', // required
+        type: 'checkbox', // required
+        label: '新品',
+        defaultValue: false,
+        admin:{ 
+          width:"25%",          
+        }
+      },
+      ] 
+     }
+    , 
+    {
+     type:'row',
+     fields:[
+
+      {
+        name: 'ocategories', // required
+        label: 'Categories',
+        type: 'relationship', // required
+        relationTo: 'categories', // required
+        hasMany: true,
+        admin:{
+          width:"34%",
+        }
+      },
+      {
+        name: 'collections', // required
+        label: 'Collections',
+        type: 'relationship', // required
+        relationTo: 'collections', // required
+        hasMany: true,
+        admin:{
+          width:"33%",
+        }
+      },
+      {
+        name: 'productTags', // required
+        label: '标签',
+        type: 'relationship', // required
+        relationTo: 'productTags', // required
+        hasMany: true,
+        admin:{
+          width:"34%",
+        }
+      },  
      ] 
     }
    ,   
-   {
-    name:"categories",
-    label: "类目",
-    type:"relationship",
-    relationTo:["categories"],
-    hasMany: true,
-  }, 
     {
       type: "tabs", // required
       tabs: [
