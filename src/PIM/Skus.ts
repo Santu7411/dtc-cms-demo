@@ -93,7 +93,7 @@ const Skus: CollectionConfig = {
         ],
       },
       {
-        name: "resources",
+        name: "resourceLists",
         label: "素材", // required
         fields: [
           // required
