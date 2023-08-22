@@ -6,6 +6,10 @@ import BeforeDashboard from './components/BeforeDashboard';
 import Media from './collections/Media';
 
 import Categories from './PIM/Categories';
+import Collections from './PIM/Collections';
+import ProductTags from './PIM/ProductTags';
+import Products from './PIM/Products';
+import Skus from './PIM/Skus';
 
 export default buildConfig({
   admin: {
@@ -17,7 +21,7 @@ export default buildConfig({
     }
   },
   collections: [
-    Categories, Users, Media
+    Products, Skus, Categories, Collections, ProductTags, Users, Media
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
