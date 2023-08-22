@@ -128,15 +128,15 @@ const Products: CollectionConfig = {
                 {
                   type:'row',
                   fields:[
-                    {
-                      name:"resources",
-                      label: "素材",
-                      type:"relationship",
-                      relationTo:["resources"],
-                      admin:{ 
-                        width:"50%",          
-                      }
-                    },
+                  //  {
+                 //     name:"resources",
+                 //     label: "素材",
+                 //     type:"relationship",
+                 //     relationTo:["resources"],
+                 //     admin:{ 
+                 //       width:"50%",          
+                 //     }
+                 //   },
                 {
                   name: "status",
                   type: "select",
