@@ -5,10 +5,11 @@ import { payloadCloud } from '@payloadcms/plugin-cloud';
 import BeforeDashboard from './components/BeforeDashboard';
 import Media from './collections/Media';
 
-import Categories from './PIM/Categories';
-import Collections from './PIM/Collections';
-import ProductTags from './PIM/ProductTags';
-import Skus from './PIM/Skus';
+import Categories from './collections/PIM/Categories';
+import Collections from './collections/PIM/Collections';
+import ProductTags from './collections/PIM/ProductTags';
+import Skus from './collections/PIM/Skus';
+import Products from './collections/PIM/Products';
 
 export default buildConfig({
   admin: {
@@ -20,7 +21,7 @@ export default buildConfig({
     }
   },
   collections: [
-    Skus, Categories, Collections, ProductTags, Users, Media
+    Products, Skus, Categories, Collections, ProductTags, Users, Media
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
