@@ -92,63 +92,7 @@ const Skus: CollectionConfig = {
         },
         ],
       },
-      {
-        name: "resourceLists",
-        label: "素材", // required
-        fields: [
-          // required
-          {
-            name: "resources", // required
-            type: "array", // required
-            label: "素材",
-            fields: [
-              {
-                type:'row',
-                fields:[
-           //       {
-          //          name:"resources",
-           //         label: "素材",
-         //          type:"relationship",
-         //           relationTo:["resources"],
-         //           admin:{ 
-         //             width:"50%",          
-         //           }
-         //         },
-              {
-                name: "status",
-                type: "select",
-                label: "状态",
-                admin:{
-                  width:"50%",
-                        style: {
-                          alignSelf: 'flex-end',
-                        },
-                },
-                options: [
-                  {
-                    label: '计划',
-                    value: 'planned',
-                  },
-                  {
-                    label: '准备中',
-                    value: 'producing',
-                  },
-                  {
-                    label: '可用',
-                    value: 'ready',
-                  },
-                  {
-                    label: '已过期',
-                    value: 'expired',
-                  },
-                ],
-              },
-          ],
-        },
-            ]
-        },
-        ],
-      }
+
     ],
   },
 ]
