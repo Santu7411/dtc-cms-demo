@@ -3,8 +3,8 @@ import { CollectionConfig } from 'payload/types';
 const Channels: CollectionConfig = {
   slug: 'channels',
   labels: {
-    singular: "Target",
-    plural: "Targets",
+    singular: "channel",
+    plural: "channels",
   },    
   admin: {
     useAsTitle: 'title',

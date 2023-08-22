@@ -3,8 +3,8 @@ import { CollectionConfig } from 'payload/types';
 const Tiers: CollectionConfig = {
   slug: 'tiers',
   labels: {
-    singular: "Target",
-    plural: "Targets",
+    singular: "TTier",
+    plural: "Tiers",
   },    
   admin: {
     useAsTitle: 'title',
