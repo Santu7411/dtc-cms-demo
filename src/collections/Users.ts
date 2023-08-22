@@ -5,6 +5,7 @@ const Users: CollectionConfig = {
   auth: true,
   admin: {
     useAsTitle: 'email',
+    group: 'General Settings',
   },
   access: {
     read: () => true,

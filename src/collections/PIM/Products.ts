@@ -9,7 +9,7 @@ const Products: CollectionConfig = {
   admin: {
     useAsTitle: 'titleCN',
     listSearchableFields: ['titleCN', 'titleEN','titleNick'],
-    group: 'Product',
+    group: 'PIM',
   },
   fields: [
     {

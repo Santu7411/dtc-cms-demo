@@ -9,7 +9,7 @@ const Skus: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     listSearchableFields: ['title', 'skuId'],
-    group: 'Product',
+    group: 'PIM',
   },
   fields: [
     {
