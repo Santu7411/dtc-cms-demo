@@ -6,7 +6,7 @@ import AttrFile from '../../blocks/attributes/attrFile';
 import AttrText from '../../blocks/attributes/attrText';
 import AttrRichText from '../../blocks/attributes/attrRichText';
 import AttrSingleSelect from '../../blocks/attributes/attrSingleSelect';
-import AttrCheckbox from '../../blocks/attributes/attrCheckBox';
+import AttrCheckbox from '../../blocks/attributes/attrCheckbox';
 import AttrMultiSelect from '../../blocks/attributes/attrMultiSelect';
 import AttrColor from '../../blocks/attributes/attrColor';
 
