@@ -13,6 +13,7 @@ const AttrCheckbox: Block = {
       fields:[
         {
           name: 'attribute', 
+          label:'Attribute',
           type: 'relationship', // required
           relationTo: ['attributes'], // required
           hasMany: false,
@@ -22,10 +23,20 @@ const AttrCheckbox: Block = {
         },
     {
       name: "attributeValue",
+      label:'Value',
       type: "checkbox",
       defaultValue: false,
       admin:{
-        width:"40%",
+        width:"20%",
+      }
+    },
+    {
+      name: "isHidden",
+      label:'Hidden?',
+      type: "checkbox",
+      defaultValue: false,
+      admin:{
+        width:"20%",
       }
     },
 ],
