@@ -1,4 +1,14 @@
 import { CollectionConfig } from 'payload/types';
+import AttrMeasurements from '../../blocks/attributes/attrMeasurements';
+import AttrDate from '../../blocks/attributes/attrDate';
+import AttrImage from '../../blocks/attributes/attrImage';
+import AttrFile from '../../blocks/attributes/attrFile';
+import AttrText from '../../blocks/attributes/attrText';
+import AttrRichText from '../../blocks/attributes/attrRichText';
+import AttrSingleSelect from '../../blocks/attributes/attrSingleSelect';
+import AttrCheckbox from '../../blocks/attributes/attrCheckBox';
+import AttrMultiSelect from '../../blocks/attributes/attrMultiSelect';
+import AttrColor from '../../blocks/attributes/attrColor';
 
 const Products: CollectionConfig = {
   slug: 'products',
@@ -125,43 +135,17 @@ const Products: CollectionConfig = {
       tabs: [
         // required
         {
-          name: "Info",
+          name: "attributesTab",
           label: "产品属性", // required
           fields: [
-            // required
-             {
-              name: "properties", // required
-              type: "array", // required
-              label: "产品属性",
-              labels: {
-                singular: "属性",
-                plural: "属性",
-              },
-              fields: [
-                {
-                  type:'row',
-                  fields:[
-                {
-                  name: "propertyKey",
-                  type: "text",
-                  admin:{ 
-                    width:"50%",          
-                  }
-                },
-                {
-                  name: "propertyValue",
-                  type: "text",
-                  admin:{
-                    width:"50%",
-                          style: {
-                            alignSelf: 'flex-end',
-                          },
-                  }
-                },
-            ],
-          },
-              ]
-          },
+            {
+              name: 'attributes', // required
+              type: 'blocks', // required
+              blocks: [
+                // required
+                AttrMeasurements, AttrDate, AttrImage, AttrFile, AttrText, AttrRichText, AttrSingleSelect, AttrCheckbox, AttrMultiSelect, AttrColor
+              ],
+            },
           ],
         },
         {

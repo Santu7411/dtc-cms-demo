@@ -17,6 +17,9 @@ import Tiers from './collections/General/Tiers';
 import Channels from './collections/General/Chanels';
 import CalculatedEvents from './collections/General/CalculatedEvents';
 import InteractiveEvents from './collections/General/InteractiveEvents copy';
+import Measurements from './collections/PIM/Measurements';
+import Attributes from './collections/PIM/Attributes';
+import Options from './collections/PIM/Options';
 
 export default buildConfig({
   admin: {
@@ -28,7 +31,7 @@ export default buildConfig({
     }
   },
   collections: [
-    Products, Skus, Categories, Collections, ProductTags, Users, Media, Resources, TouchPoints, Targets, Tiers, Channels, CalculatedEvents, InteractiveEvents
+    Products, Skus, Categories, Collections, ProductTags, Attributes, Measurements, Options, Users, Media, Resources, TouchPoints, Targets, Tiers, Channels, CalculatedEvents, InteractiveEvents
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
