@@ -15,8 +15,6 @@ import TouchPoints from './collections/General/TouchPoints';
 import Targets from './collections/General/Targets';
 import Tiers from './collections/General/Tiers';
 import Channels from './collections/General/Chanels';
-import CalculatedEvents from './collections/General/CalculatedEvents';
-import InteractiveEvents from './collections/General/InteractiveEvents copy';
 import Measurements from './collections/PIM/Measurements';
 import Attributes from './collections/PIM/Attributes';
 import Options from './collections/PIM/Options';
