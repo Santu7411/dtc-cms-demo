@@ -12,6 +12,9 @@ import AttrColor from '../../blocks/attributes/attrColor';
 
 const Products: CollectionConfig = {
   slug: 'products',
+  versions: {
+    drafts: true,
+  },
   labels: {
     singular: "Product",
     plural: "Products",
@@ -23,9 +26,9 @@ const Products: CollectionConfig = {
   },
   fields: [
     {
-      name: 'thumbnail', // required
-      type: 'upload', // required
-      relationTo: 'media', // required
+      name: 'thumbnail', 
+      type: 'upload', 
+      relationTo: 'media',
     },
     {
       type:'row',
@@ -154,12 +157,78 @@ const Products: CollectionConfig = {
 
                   fields:[
                     {
-                      name:"skus",
-                      label: "SKU",
-                      type:"relationship",
-                      relationTo:["skus"],
-                      hasMany: true,
+                      name: "skus", // required
+                      type: "array", // required
+                      label: "SKU List",
+                      fields: [
+                        {
+                          type: 'row', // required
+                          fields: [ // required
+                          {
+                            name:"sku",
+                            label: "SKU",
+                            type:"relationship",
+                            relationTo:["skus"],
+                            hasMany: false,
+                            admin: {
+                              width: '30%',
+                            },
+                          },
+                          {
+                            name: 'skuStatus', // required
+                            type: 'select', // required
+                            hasMany: false,
+                            options: [
+                              {
+                                label: '准备中',
+                                value: 'plan',
+                              },
+                              {
+                                label: '已上线',
+                                value: 'online',
+                              },
+                              {
+                                label: '已下线',
+                                value: 'offline',
+                              },
+                            ],
+                            admin: {
+                              width: '20%',
+                            },
+                          },
+                          {
+                            name:"start",
+                            label: "上线时间",
+                            type:"date",
+                            admin:{
+                              width:"25%",
+                                    style: {
+                                      alignSelf: 'flex-end',
+                                    },
+                              date:{
+                                pickerAppearance: "dayAndTime",
+                              }      
+                            }
+                          },
+                          {
+                            name:"end",
+                            label: "下线时间",
+                            type:"date",
+                            admin:{
+                              width:"25%",
+                                    style: {
+                                      alignSelf: 'flex-end',
+                                    },
+                              date:{
+                                pickerAppearance: "dayAndTime",
+                              },
+                            }
+                          }, 
+                          ],
+                        }
+                      ]
                     },
+                    
                   ]
         },
         {
@@ -189,7 +258,7 @@ const Products: CollectionConfig = {
                   type: "select",
                   label: "状态",
                   admin:{
-                    width:"50%",
+                    width:"25%",
                           style: {
                             alignSelf: 'flex-end',
                           },
@@ -213,6 +282,21 @@ const Products: CollectionConfig = {
                     },
                   ],
                 },
+                {
+                  name:"expired",
+                  label: "过期时间",
+                  type:"date",
+                  admin:{
+                    width:"25%",
+                          style: {
+                            alignSelf: 'flex-end',
+                          },
+                    date:{
+                      pickerAppearance: "dayOnly",
+                      displayFormat: "d MMM yyy",
+                    },
+                  }
+                }, 
             ],
           },
               ]

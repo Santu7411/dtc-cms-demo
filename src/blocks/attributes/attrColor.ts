@@ -18,15 +18,15 @@ const AttrColor: Block = {
           relationTo: ['attributes'], // required
           hasMany: false,
           admin:{
-            width:"40%",
+            width:"30%",
           }
         },
     {
       name: "attributeValue",
-      label: 'Value',
+      label: 'Color Name',
       type: "text",
       admin:{
-        width:"30%",
+        width:"25%",
       }
     },
     {
@@ -34,7 +34,16 @@ const AttrColor: Block = {
       label: 'Color',
       type: "text",
       admin:{
-        width:"30%",
+        width:"25%",
+      }
+    },
+    {
+      name: "isHidden",
+      label:'Hidden?',
+      type: "checkbox",
+      defaultValue: false,
+      admin:{
+        width:"20%",
       }
     },
 ],

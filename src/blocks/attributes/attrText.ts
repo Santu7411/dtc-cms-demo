@@ -13,6 +13,7 @@ const AttrText: Block = {
       fields:[
         {
           name: 'attribute', 
+          label:'Attribute',
           type: 'relationship', // required
           relationTo: ['attributes'], // required
           hasMany: false,
@@ -22,9 +23,19 @@ const AttrText: Block = {
         },
     {
       name: "attributeValue",
+      label:'Value',
       type: "text",
       admin:{
         width:"60%",
+      }
+    },
+    {
+      name: "isHidden",
+      label:'Hidden?',
+      type: "checkbox",
+      defaultValue: false,
+      admin:{
+        width:"20%",
       }
     },
 ],

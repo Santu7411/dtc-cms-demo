@@ -1,10 +1,10 @@
 import { Block } from 'payload/types';
 
-const AttrCheckbox: Block = {
-  slug: 'attrCheckbox', // required
+const RedeemEvents: Block = {
+  slug: 'redeemEvents', // required
   labels: {
-    singular: "Checkbox",
-    plural: "Checkbox",
+    singular: "兑换",
+    plural: "兑换",
   },
   imageURL: 'https://res.cloudinary.com/protime-tef/image/upload/c_pad,h_120,w_64/v1686821100/icon_file_sx2p3c.png',
   fields: [
@@ -18,16 +18,15 @@ const AttrCheckbox: Block = {
           relationTo: ['attributes'], // required
           hasMany: false,
           admin:{
-            width:"60%",
+            width:"40%",
           }
         },
     {
       name: "attributeValue",
-      label:'Yes/No',
-      type: "checkbox",
-      defaultValue: false,
+      label:'Value',
+      type: "text",
       admin:{
-        width:"20%",
+        width:"60%",
       }
     },
     {
@@ -45,4 +44,4 @@ const AttrCheckbox: Block = {
 };
 
 
-export default AttrCheckbox;
+export default RedeemEvents;

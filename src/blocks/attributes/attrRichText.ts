@@ -13,18 +13,29 @@ const AttrRichText: Block = {
       fields:[
         {
           name: 'attribute', 
+          label:'Attribute',
           type: 'relationship', // required
           relationTo: ['attributes'], // required
           hasMany: false,
           admin:{
-            width:"40%",
+            width:"30%",
           }
         },
     {
       name: "attributeValue",
+      label:'Text',
       type: "richText",
       admin:{
-        width:"60%",
+        width:"50%",
+      }
+    },
+    {
+      name: "isHidden",
+      label:'Hidden?',
+      type: "checkbox",
+      defaultValue: false,
+      admin:{
+        width:"20%",
       }
     },
 ],

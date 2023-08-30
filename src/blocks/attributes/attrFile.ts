@@ -13,28 +13,40 @@ const AttrFile: Block = {
       fields:[
         {
           name: 'attribute', 
+          label:'Attribute',
           type: 'relationship', // required
           relationTo: ['attributes'], // required
           hasMany: false,
           admin:{
-            width:"30%",
+            width:"25%",
           }
         },
     {
       name: "attributeValue",
+      label:'File Name',
       type: "text",
+      admin:{
+        width:"25%",
+      }
+    },
+    {
+      name: 'attributeFile', 
+      label:'File',
+      type: 'upload', 
+      relationTo: 'media', 
       admin:{
         width:"30%",
       }
     },
     {
-      name: 'attributeFile', 
-      type: 'upload', 
-      relationTo: 'media', 
+      name: "isHidden",
+      label:'Hidden?',
+      type: "checkbox",
+      defaultValue: false,
       admin:{
-        width:"40%",
+        width:"20%",
       }
-    },
+    },    
 ],
 },
   ]

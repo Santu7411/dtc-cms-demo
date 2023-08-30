@@ -20,6 +20,13 @@ import InteractiveEvents from './collections/General/InteractiveEvents copy';
 import Measurements from './collections/PIM/Measurements';
 import Attributes from './collections/PIM/Attributes';
 import Options from './collections/PIM/Options';
+import Engagements from './collections/Campaign/Engagements';
+import GWPs from './collections/Campaign/GWPs';
+import Coupons from './collections/Campaign/Coupons';
+import Badges from './collections/Campaign/Badges';
+import Gifts from './collections/Campaign/Gifts';
+import Wallets from './collections/Campaign/Wallets';
+import Pages from './collections/MP/Pages';
 
 export default buildConfig({
   admin: {
@@ -31,7 +38,7 @@ export default buildConfig({
     }
   },
   collections: [
-    Products, Skus, Categories, Collections, ProductTags, Attributes, Measurements, Options, Users, Media, Resources, TouchPoints, Targets, Tiers, Channels, CalculatedEvents, InteractiveEvents
+    Products, Skus, Categories, Collections, ProductTags, Attributes, Measurements, Options, Engagements, GWPs, Wallets, Coupons, Badges, Gifts, Pages, Users, Media, Resources, TouchPoints, Targets, Tiers, Channels, 
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
