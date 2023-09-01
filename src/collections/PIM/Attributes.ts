@@ -10,6 +10,7 @@ const Attributes: CollectionConfig = {
     useAsTitle: 'attributeLabel',
     listSearchableFields: ['attributeLabel','attributeKey'],
     group: 'PIM',
+    hidden: true,
   },
   fields: [
     {

@@ -1,46 +1,46 @@
 import { Block } from 'payload/types';
+import ContentDeliverSingle from '../trigger/ContentDeliverSingle';
+import AddPoints from '../effects/AddPoints';
+import GiveGWPs from '../effects/GiveGWPs';
+import GiveGifts from '../effects/GiveGifts';
+import GiveCoupons from '../effects/GiveCoupons';
+import GiveBadges from '../effects/GiveBadges';
+import EbaCare from '../effects/EbaCare';
+import PushMpHints from '../effects/PushMpHints';
+import PushSMS from '../effects/PushSMS';
+import EngagementLimits from '../../fields/engagementLimits';
+import LinkClick from '../trigger/LinkClick';
+import EnquireService from '../trigger/EnquireService';
+import TalkingInGroup from '../trigger/TalkingInGroup';
 
 const InteractiveEvents: Block = {
   slug: 'interactiveEvents', // required
   labels: {
-    singular: "互动事件",
-    plural: "互动事件",
+    singular: "实时互动激励",
+    plural: "实时互动激励",
   },
   imageURL: 'https://res.cloudinary.com/protime-tef/image/upload/c_pad,h_120,w_64/v1686821100/icon_file_sx2p3c.png',
   fields: [
+    // required
+    
     {
-      type:'row',
-      fields:[
-        {
-          name: 'attribute', 
-          label:'Attribute',
-          type: 'relationship', // required
-          relationTo: ['attributes'], // required
-          hasMany: false,
-          admin:{
-            width:"40%",
-          }
-        },
-    {
-      name: "attributeValue",
-      label:'Value',
-      type: "text",
-      admin:{
-        width:"60%",
-      }
+      name: 'triggers', // required
+      type: 'blocks', // required
+      label: '触发条件',
+      blocks: [
+        ContentDeliverSingle, LinkClick, EnquireService, TalkingInGroup
+      ],
     },
     {
-      name: "isHidden",
-      label:'Hidden?',
-      type: "checkbox",
-      defaultValue: false,
-      admin:{
-        width:"20%",
-      }
+      name: 'effects', // required
+      type: 'blocks', // required
+      label: '结果',
+      blocks: [
+        GiveGWPs, GiveGifts, GiveCoupons, AddPoints, GiveBadges, EbaCare, PushMpHints, PushSMS
+      ],
     },
-],
-},
-  ]
+    EngagementLimits,
+  ],
 };
 
 

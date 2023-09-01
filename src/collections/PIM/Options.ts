@@ -9,6 +9,7 @@ const Options: CollectionConfig = {
   admin: {
     useAsTitle: 'optionLabel',
     group: 'PIM',
+    hidden: true,
   },
      fields:[
       {

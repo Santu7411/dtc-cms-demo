@@ -25,6 +25,7 @@ import Badges from './collections/Campaign/Badges';
 import Gifts from './collections/Campaign/Gifts';
 import Wallets from './collections/Campaign/Wallets';
 import Pages from './collections/MP/Pages';
+import Assets from './collections/MP/Assets';
 
 export default buildConfig({
   admin: {
@@ -36,7 +37,7 @@ export default buildConfig({
     }
   },
   collections: [
-    Products, Skus, Categories, Collections, ProductTags, Attributes, Measurements, Options, Engagements, GWPs, Wallets, Coupons, Badges, Gifts, Pages, Users, Media, Resources, TouchPoints, Targets, Tiers, Channels, 
+    Products, Skus, Categories, Collections, ProductTags, Attributes, Measurements, Options, Engagements, GWPs, Wallets, Coupons, Badges, Gifts, Pages, Assets, Users, Media, Resources, TouchPoints, Targets, Tiers, Channels, 
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),

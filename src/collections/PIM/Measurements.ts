@@ -10,6 +10,7 @@ const Measurements: CollectionConfig = {
     useAsTitle: 'title',
     listSearchableFields: ['title'],
     group: 'PIM',
+    hidden: true,
   },
   fields: [
     {

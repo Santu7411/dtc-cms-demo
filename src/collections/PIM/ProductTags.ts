@@ -9,6 +9,7 @@ const ProductTags: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
     group: 'PIM',
+    hidden: true,
   },
   access: {
     read: () => true,
