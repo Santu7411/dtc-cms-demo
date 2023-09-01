@@ -8,7 +8,7 @@ const Pages: CollectionConfig = {
   },    
   admin: {
     useAsTitle: 'title',
-    group: 'MP CMS',
+    group: 'Wechat MP',
   },
   fields: [
     {
