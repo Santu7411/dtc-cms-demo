@@ -85,7 +85,7 @@ const Products: CollectionConfig = {
         }
       },
       {
-        name: 'isNew', // required
+        name: 'isNewProduct', // required
         type: 'checkbox', // required
         label: '新品',
         defaultValue: false,
