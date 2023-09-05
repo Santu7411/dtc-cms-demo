@@ -27,6 +27,12 @@ import Wallets from './collections/Campaign/Wallets';
 import Pages from './collections/MP/Pages';
 import Assets from './collections/General/Assets';
 import Slides from './collections/MP/Slides';
+import Feeds from './collections/MP/Feeds';
+import H5 from './collections/MP/H5';
+import Navigations from './collections/MP/Navigations';
+import Links from './collections/MP/Links';
+import SystemPages from './collections/MP/SystemPages';
+import Campaigns from './collections/Campaign/Campaigns';
 
 export default buildConfig({
   admin: {
@@ -38,7 +44,7 @@ export default buildConfig({
     }
   },
   collections: [
-    Products, Skus, Categories, Collections, ProductTags, Attributes, Measurements, Options, Engagements, GWPs, Wallets, Coupons, Badges, Gifts, Pages, Slides, Assets, Users, Media, Resources, TouchPoints, Targets, Tiers, Channels, 
+    Products, Skus, Categories, Collections, ProductTags, Attributes, Measurements, Options, Campaigns, Engagements, GWPs, Wallets, Coupons, Badges, Gifts, Pages, Feeds, Slides, H5, Navigations, Links, SystemPages, Assets, Users, Media, Resources, TouchPoints, Targets, Tiers, Channels, 
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),

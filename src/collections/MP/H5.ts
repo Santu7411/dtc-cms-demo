@@ -3,11 +3,11 @@ import SelectTargets from '../../fields/selectTargets';
 import RelatedProductsAndSkus from '../../fields/relatedProductsAndSkus';
 import PublishStatus from '../../fields/publishStatus';
 
-const Slides: CollectionConfig = {
-  slug: 'slides',
+const H5: CollectionConfig = {
+  slug: 'h5',
   labels: {
-    singular: "Slide",
-    plural: "Slides",
+    singular: "H5 Page",
+    plural: "H5 Pages",
   },    
   admin: {
     useAsTitle: 'title',
@@ -46,192 +46,27 @@ const Slides: CollectionConfig = {
   ]
     },
     {
-      name: "frontContent", 
+      name: "h5Source", 
       type: "group", 
-      label: "前景内容",
-      fields: [ 
+      label: "H5",
+      fields: [
         {
           type:'row',
           fields:[
             {
-              name: 'hasTitle', 
-              type: 'checkbox', 
-              label: '大标题',
-              defaultValue: false,
+              name: 'h5Title',
+              label: 'H5 Title',
+              type: 'text',
             },
             {
-              name: 'hasSubTitle', 
-              type: 'checkbox', 
-              label: '副标题',
-              defaultValue: false,
+              name: 'h5Url',
+              label: 'URL',
+              type: 'text',
             },
-            {
-              name: 'hasCopyText', 
-              type: 'checkbox', 
-              label: '文字',
-              defaultValue: false,
-            },
-            {
-              name: 'hasButton', 
-              type: 'checkbox', 
-              label: '按钮',
-              defaultValue: false,
-            },
-            {
-              name: 'alignH', // required
-              label: "水平对齐",
-              type: 'select', // required
-              hasMany: false,
-              options: [
-                {
-                  label: '左',
-                  value: 'left',
-                },
-                {
-                  label: '中',
-                  value: 'center',
-                },
-                {
-                  label: '右',
-                  value: 'right',
-                }      
-              ],
-              admin:{
-                width:"150px",
-              }
-            },
-            {
-              name: 'alignV', // required
-              label: "竖直对齐",
-              type: 'select', // required
-              hasMany: false,
-              options: [
-                {
-                  label: '上',
-                  value: 'up',
-                },
-                {
-                  label: '中',
-                  value: 'middle',
-                },
-                {
-                  label: '下',
-                  value: 'down',
-                }      
-              ],
-              admin:{
-                width:"150px",
-              }
-            },
-  ]
-    },
-  {
-    name: 'bigTitle', 
-    label: '大标题',
-    type: 'text', 
-    admin:{
-      condition: (data, siblingData, { user }) => {
-        if (siblingData.hasTitle) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-    }
-  }, 
-  {
-    name: 'subTitle', 
-    label: '副标题',
-    type: 'text', 
-    admin:{
-      condition: (data, siblingData, { user }) => {
-        if (siblingData.hasSubTitle) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-    }
-  },
-  {
-    name: 'copyText', 
-    label: '文字',
-    type: 'textarea', 
-    admin:{
-      condition: (data, siblingData, { user }) => {
-        if (siblingData.hasCopyText) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-    }
-  },  
-  {
-    type:'row',
-    fields:[
-      {
-        name: 'buttonText', 
-        label: '按钮文字',
-        type: 'text',
-    admin:{
-      condition: (data, siblingData, { user }) => {
-        if (siblingData.hasButton) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-    }
-      },   
-      {
-        name: 'buttonLink', 
-        label: '按钮链接',
-        type: 'text', 
-    admin:{
-      condition: (data, siblingData, { user }) => {
-        if (siblingData.hasButton) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-    }
-      },  
-    ]
-  },
-  ]
-    },  
-    {
-      name: "backgroundContent", 
-      type: "group", 
-      label: "背景内容",
-      fields: [ 
-        {
-          name: 'backgroundType', 
-          type: 'radio', 
-          options: [ 
-            {
-              label: '视频',
-              value: 'video',
-            },
-            {
-              label: '图片',
-              value: 'image',
-            },
-          ],
-          defaultValue: 'image', // The first value in options.
-          admin: {
-            layout: 'horizontal',
-          }
-        },
-        {
-          name: 'backgroundAsset', 
-          type: 'upload', 
-          relationTo: 'media',
+          ]
         },
       ]
-    }, 
+    },
     {
       name: "functions", 
       type: "group", 
@@ -419,4 +254,4 @@ const Slides: CollectionConfig = {
   ]
 }
 
-export default Slides;
+export default H5;

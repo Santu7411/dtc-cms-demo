@@ -1,13 +1,12 @@
 import { CollectionConfig } from 'payload/types';
 import SelectTargets from '../../fields/selectTargets';
 import PublishStatus from '../../fields/publishStatus';
-import ContentSchedule from '../../fields/contentSchedule';
 
-const Pages: CollectionConfig = {
-  slug: 'pages',
+const Feeds: CollectionConfig = {
+  slug: 'feeds',
   labels: {
-    singular: "Page",
-    plural: "Pages",
+    singular: "Feed",
+    plural: "Feeds",
   },    
   admin: {
     useAsTitle: 'title',
@@ -19,24 +18,23 @@ const Pages: CollectionConfig = {
       name: 'title',
       type: 'text',
     },
+    SelectTargets,
     {
       type: "tabs", 
       tabs: [
         {
-          label: "Content Plan", 
+          label: "Content", 
           fields: [
             {
-              name: "contentPlan", 
+              name: "slides", 
               type: "array", 
-              label: "Content",
+              label: "Slides",
               fields: [
-                SelectTargets,
-                ContentSchedule,
                 {
-                  name: 'content', 
+                  name: 'relatedSlide', 
                   type: 'relationship', 
-                  relationTo: ['feeds','h5','systemPages'], 
-                  hasMany: false,
+                  relationTo: 'slides', 
+                  hasMany: true,
                 }
               ],
             },
@@ -63,5 +61,4 @@ const Pages: CollectionConfig = {
   ]
 }
 
-
-export default Pages;
+export default Feeds;
