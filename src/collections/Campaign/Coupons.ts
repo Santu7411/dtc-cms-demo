@@ -4,7 +4,7 @@ const Coupons: CollectionConfig = {
   slug: 'coupons',
   admin: {
     useAsTitle: 'name',
-    group: 'Rewards',
+    group: 'Loyalty Engine',
   },
   access: {
     read: () => true,

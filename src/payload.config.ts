@@ -44,7 +44,7 @@ export default buildConfig({
     }
   },
   collections: [
-    Products, Skus, Categories, Collections, ProductTags, Attributes, Measurements, Options, Campaigns, Engagements, GWPs, Wallets, Coupons, Badges, Gifts, Pages, Feeds, Slides, H5, Navigations, Links, SystemPages, Assets, Users, Media, Resources, TouchPoints, Targets, Tiers, Channels, 
+    Products, Skus, Categories, Collections, ProductTags, Attributes, Measurements, Options, Pages, Feeds, Slides, H5, Navigations, Links, SystemPages, Campaigns, Engagements, GWPs, Wallets, Coupons, Badges, Gifts, Assets, Resources, Media, TouchPoints, Targets, Tiers, Channels, Users, 
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),

@@ -4,7 +4,7 @@ const Badges: CollectionConfig = {
   slug: 'badges',
   admin: {
     useAsTitle: 'name',
-    group: 'Rewards',
+    group: 'Loyalty Engine',
   },
   access: {
     read: () => true,

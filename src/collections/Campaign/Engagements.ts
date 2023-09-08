@@ -14,7 +14,7 @@ const Engagements: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     listSearchableFields: ['title','id'],
-    group: 'Campaign',
+    group: 'Loyalty Engine',
   },
 fields: [
   {

@@ -4,7 +4,7 @@ const Gifts: CollectionConfig = {
   slug: 'gifts',
   admin: {
     useAsTitle: 'name',
-    group: 'Rewards',
+    group: 'Loyalty Engine',
   },
   access: {
     read: () => true,

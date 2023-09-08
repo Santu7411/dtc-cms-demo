@@ -8,7 +8,7 @@ const GWPs: CollectionConfig = {
   },    
   admin: {
     useAsTitle: 'title',
-    group: 'Rewards',
+    group: 'Loyalty Engine',
   },
   fields: [
     {

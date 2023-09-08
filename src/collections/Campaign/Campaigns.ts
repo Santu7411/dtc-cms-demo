@@ -9,7 +9,7 @@ const Campaigns: CollectionConfig = {
   },    
   admin: {
     useAsTitle: 'title',
-    group: 'Campaign',
+    group: 'Loyalty Engine',
   },
   fields: [
     {
