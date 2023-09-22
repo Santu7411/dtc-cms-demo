@@ -6,7 +6,9 @@ const Users: CollectionConfig = {
     singular: "System User",
     plural: "System Users",
   },    
-  auth: true,
+  auth: {
+    useAPIKey: true,
+  },
   admin: {
     useAsTitle: 'email',
     group: 'General Settings',
