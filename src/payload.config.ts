@@ -33,6 +33,9 @@ import Navigations from './collections/MP/Navigations';
 import Links from './collections/MP/Links';
 import SystemPages from './collections/MP/SystemPages';
 import Campaigns from './collections/Campaign/Campaigns';
+import Ebas from './collections/General/ebas';
+import Notifactions from './collections/MP/notifactions';
+import EbaHints from './collections/MP/ebaHints';
 
 export default buildConfig({
   admin: {
@@ -44,7 +47,7 @@ export default buildConfig({
     }
   },
   collections: [
-    Products, Skus, Categories, Collections, ProductTags, Attributes, Measurements, Options, Pages, Feeds, Slides, H5, Navigations, Links, SystemPages, Campaigns, Engagements, GWPs, Wallets, Coupons, Badges, Gifts, Assets, Resources, Media, TouchPoints, Targets, Tiers, Channels, Users, 
+    Products, Skus, Categories, Collections, ProductTags, Attributes, Measurements, Options, Pages, Feeds, Slides, H5, Navigations, EbaHints, Notifactions, Links, SystemPages, Campaigns, Engagements, GWPs, Wallets, Coupons, Badges, Gifts, Assets, Resources, Media, TouchPoints, Targets, Tiers, Channels, Ebas, Users, 
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
