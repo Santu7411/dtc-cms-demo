@@ -83,11 +83,6 @@ const Campaigns: CollectionConfig = {
                 type: "array", 
                 label: "Engagements",
                 fields: [
-                    {
-                        name: 'engagementPlanTitle', 
-                        label:'Plan Title',
-                        type: 'text', 
-                      },
                   {
                     name: 'engagement', 
                     type: 'relationship', 

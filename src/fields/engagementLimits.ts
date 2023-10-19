@@ -48,7 +48,7 @@ const EngagementLimits: Field =     {
             }
           },
           {
-            name: 'units', // required
+            name: 'unitsLimitValue', // required
             type: 'number', // required
             admin: {
               step: 1,
@@ -100,7 +100,7 @@ fields:[
     }
   },
   {
-    name: 'units', // required
+    name: 'unitsLimitPerMemberValue', // required
     type: 'number', // required
     admin: {
       step: 1,
@@ -152,7 +152,7 @@ width:"50%",
 }
 },
 {
-name: 'units', // required
+name: 'engagementLimitPerMemberValue', // required
 type: 'number', // required
 admin: {
 step: 1,
