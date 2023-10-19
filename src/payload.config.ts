@@ -35,7 +35,7 @@ import SystemPages from './collections/MP/SystemPages';
 import Campaigns from './collections/Campaign/Campaigns';
 import Ebas from './collections/General/ebas';
 import Notifactions from './collections/MP/notifactions';
-import EbaHints from './collections/MP/ebaHints';
+import EbaHints from './collections/MP/EBAHints';
 
 export default buildConfig({
   admin: {
